@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { 
-  MapPinIcon, 
-  PhoneIcon, 
-  EnvelopeIcon, 
+import {
+  MapPinIcon,
+  PhoneIcon,
+  EnvelopeIcon,
   ClockIcon,
   UserIcon,
   BuildingOfficeIcon,
@@ -104,7 +104,7 @@ export default function ContactPage() {
       ...prev,
       [field]: value
     }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({
@@ -141,22 +141,22 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Here you would make the actual API call to your backend
       console.log('Contact form submitted:', formData);
-      
+
       setIsSubmitted(true);
-      
+
       // Reset form after successful submission
       setTimeout(() => {
         setFormData({
@@ -169,7 +169,7 @@ export default function ContactPage() {
         });
         setIsSubmitted(false);
       }, 3000);
-      
+
     } catch (error) {
       setErrors({ general: 'Gabim në dërgimin e mesazhit. Provoni përsëri.' });
     } finally {
@@ -190,7 +190,7 @@ export default function ContactPage() {
           <p className="text-gray-600 mb-6">
             Faleminderit për mesazhin tuaj. Do të ju përgjigjemi brenda 24 orëve.
           </p>
-          <button 
+          <button
             onClick={() => setIsSubmitted(false)}
             className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
           >
@@ -211,7 +211,7 @@ export default function ContactPage() {
               Na <span className="text-green-600">Kontaktoni</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Jemi këtu për t'ju ndihmuar. Dërgoni një mesazh dhe do të ju përgjigjemi 
+              Jemi këtu për t&apos;ju ndihmuar. Dërgoni një mesazh dhe do të ju përgjigjemi
               sa më shpejt që të jetë e mundur.
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Dërgoni Mesazh</h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* General Error */}
               {errors.general && (

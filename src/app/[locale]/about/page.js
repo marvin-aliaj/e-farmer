@@ -1,15 +1,16 @@
 'use client';
 
-import { 
-  MapPinIcon, 
-  PhoneIcon, 
-  EnvelopeIcon, 
+import {
+  MapPinIcon,
+  PhoneIcon,
+  EnvelopeIcon,
   ClockIcon,
   UserGroupIcon,
   ChartBarIcon,
   ShieldCheckIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
+import Link from "next/link";
 
 export default function AboutPage() {
   const team = [
@@ -79,7 +80,7 @@ export default function AboutPage() {
               Rreth <span className="text-green-600">E-Farmer Albania</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Platforma e parë në Shqipëri që lidh fermerët me klientët dhe shitësit me shumicë, 
+              Platforma e parë në Shqipëri që lidh fermerët me klientët dhe shitësit me shumicë,
               duke ofruar zgjidhje të gjithanshme për problemet e transportit dhe magazinimit.
             </p>
           </div>
@@ -93,12 +94,12 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Misioni Ynë</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Misioni ynë është të revolucionojmë mënyrën se si fermerët shqiptarë lidhen me tregun, 
-                duke ofruar një platformë teknologjike që lehtëson tregtinë, rrit efikasitetin dhe 
+                Misioni ynë është të revolucionojmë mënyrën se si fermerët shqiptarë lidhen me tregun,
+                duke ofruar një platformë teknologjike që lehtëson tregtinë, rrit efikasitetin dhe
                 promovon produktet e cilësisë së lartë.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Ne besojmë se çdo fermer duhet të ketë akses të drejtpërdrejtë në treg, dhe çdo klient 
+                Ne besojmë se çdo fermer duhet të ketë akses të drejtpërdrejtë në treg, dhe çdo klient
                 duhet të ketë akses në produktet më të mira të fermerëve tanë.
               </p>
               <div className="flex items-center space-x-4">
@@ -113,8 +114,8 @@ export default function AboutPage() {
                 <div className="text-6xl mb-4">🌱</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Vizioni Ynë</h3>
                 <p className="text-gray-700">
-                  Të bëhemi platforma kryesore për tregtinë e produkteve agrikole në Shqipëri, 
-                  duke kontribuar në zhvillimin e qëndrueshëm të ekonomisë rurale dhe sigurimin 
+                  Të bëhemi platforma kryesore për tregtinë e produkteve agrikole në Shqipëri,
+                  duke kontribuar në zhvillimin e qëndrueshëm të ekonomisë rurale dhe sigurimin
                   e ushqimit të freskët për të gjithë shqiptarët.
                 </p>
               </div>
@@ -204,19 +205,19 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                E-Farmer Albania u lind nga një vizion i thjeshtë: të lidhim fermerët shqiptarë 
-                me tregun në një mënyrë të drejtpërdrejtë dhe efikase. Duke parë sfidat që 
-                përballin fermerët në vendimmarrje, transportin dhe magazinimin e produkteve, 
+                E-Farmer Albania u lind nga një vizion i thjeshtë: të lidhim fermerët shqiptarë
+                me tregun në një mënyrë të drejtpërdrejtë dhe efikase. Duke parë sfidat që
+                përballin fermerët në vendimmarrje, transportin dhe magazinimin e produkteve,
                 vendosëm të krijonim një zgjidhje teknologjike.
               </p>
               <p>
-                Nga një ide e vogël në një platformë të plotë, ne kemi punuar me fermerë të 
-                ndryshëm për të kuptuar nevojat e tyre dhe për të krijuar një sistem që 
+                Nga një ide e vogël në një platformë të plotë, ne kemi punuar me fermerë të
+                ndryshëm për të kuptuar nevojat e tyre dhe për të krijuar një sistem që
                 vërtet funksionon për ta.
               </p>
               <p>
-                Sot, jemi krenarë që kemi ndihmuar mbi 500 fermerë të lidhen me tregun dhe 
-                të rrisin biznesin e tyre, ndërsa kemi ofruar klientëve akses në produktet 
+                Sot, jemi krenarë që kemi ndihmuar mbi 500 fermerë të lidhen me tregun dhe
+                të rrisin biznesin e tyre, ndërsa kemi ofruar klientëve akses në produktet
                 më të mira të fermës shqiptare.
               </p>
             </div>
@@ -231,22 +232,22 @@ export default function AboutPage() {
             Bashkohuni me Ne
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            Nëse jeni fermer ose klient dhe dëshironi të përfshini në platformën tonë, 
-            ne jemi këtu për t'ju ndihmuar.
+            Nëse jeni fermer ose klient dhe dëshironi të përfshini në platformën tonë,
+            ne jemi këtu për t&apos;ju ndihmuar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/register/producer" 
+            <Link
+              href="/register/producer"
               className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Regjistrohu si Fermer
-            </a>
-            <a 
-              href="/register/client" 
+            </Link>
+            <Link
+              href="/register/client"
               className="bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 transition-colors"
             >
               Regjistrohu si Klient
-            </a>
+            </Link>
           </div>
         </div>
       </section>
